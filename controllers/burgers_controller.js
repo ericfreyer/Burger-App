@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post("/api/burgers", function (req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function (result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId, burger_name: result.insertId });
+router.post("/burgers/create", function (req, res) {
+  burger.create(req.body.burger_name, function (result) {
+      console.log(result);
+      res.redirect("/");
   });
 });
 
