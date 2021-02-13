@@ -15,16 +15,13 @@ router.get('/', (req, res) => {
 router.post("/burgers/create", function (req, res) {
   burger.create(req.body.burger_name, function (result) {
       console.log(result);
-      res.redirect("/");
+      res.redirect("/index");
   });
 });
 
-  router.put("/api/burgers/:id", function(req, res) {
-    var id = req.params.id;
-    // console.log(id);
-    burger.updateOne("devoured", true, id, function(results){
-        res.json(results);
-    });
+router.post('/burger/eat/:id', function (req, res) {
+  burger.updateOne(req.params.id, function() {
+    res.redirect('/index');
+  });
 });
-
 module.exports = router;
