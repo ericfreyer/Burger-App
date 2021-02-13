@@ -18,10 +18,12 @@ router.post('/burger/create', function (req, res) {
     });
   });
 
-  router.post('/burger/eat', function (req, res) {
-    burger.updateOne(req.body.id, function() {
-      res.redirect('/');
+  router.put("/api/burgers/:id", function(req, res) {
+    var id = req.params.id;
+    // console.log(id);
+    burger.updateOne("devoured", true, id, function(results){
+        res.json(results);
     });
-  });
+});
 
 module.exports = router;
