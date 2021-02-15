@@ -1,41 +1,53 @@
-<h1>Eat Da Burger!</h1>
+<h1 id='title'>Eat Da Burger!</h1>
 
-<h2>Burgers Not Eaten!</h2>
+<div class="container" id="mainDiv">
+  <div class="row">
+      <div id="notEatenDiv" class="col-sm">
+      <h2>Burgers Not Eaten!</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devour=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devour=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+      </div>
 
-<h2>Burgers Devoured!</h2>
+      <div id="addBurgerDiv" class="col-sm">
+        <h2>Add a Burger</h2>
+        <form id="create-form">
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger-block devour=false}}
-  {{/if}}
-  {{/each}}
-</ul>
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="burger_name">
+          </div>
 
-<h2>Add a Burger</h2>
-<form id="create-form">
+          <div class="form-group">
+            <label for="devoured">Devoured?</label><br>
+            <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
+            <input type="radio" name="devoured" value="0" id="devoured"> Not Devoured
+          </div>
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+          <button type="submit">Add Burger</button>
+        </form>
+      </div>
+
+      <div id="eatenDiv" class="col-sm">
+      <h2>Burgers Devoured!</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+      </div>
+
+    
   </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0" id="devoured"> Not Devoured
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>
 
 {{!-- awake == not_devoured
       sleepy == devoured --}}

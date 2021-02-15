@@ -1,0 +1,26 @@
+#title {
+    text-align: center;
+}
+
+html {
+    padding-top: 5%;
+
+}
+
+#mainDiv{
+    padding-top: 5%;
+
+    margin: none;
+}
+
+body {
+    background-color: rgb(245, 227, 126);
+}
+
+li {
+    padding-bottom: 5%;
+}
+
+#addBurgerDiv {
+    text-align: center;
+}
