@@ -4,18 +4,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // UPDATE
-    const changeDevouredBtns = document.querySelectorAll('.change-devoured');
+    const changeDevourBtns = document.querySelectorAll('.change-devour');
   
     // Set up the event listener for the create button
-    if (changeDevouredBtns) {
-      changeDevouredBtns.forEach((button) => {
+    if (changeDevourBtns) {
+      changeDevourBtns.forEach((button) => {
         button.addEventListener('click', (e) => {
           // Grabs the id of the element that goes by the name, "id"
           const id = e.target.getAttribute('data-id');
-          const newDevoured = e.target.getAttribute('data-newdevoured');
+          const newDevour = e.target.getAttribute('data-newdevour');
   
-          const newDevouredState = {
-            Devoured: newDevoured,
+          const newDevourState = {
+            Devoured: newDevour,
           };
   
           fetch(`/api/burgers/${id}`, {
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             },
   
             // make sure to serialize the JSON body
-            body: JSON.stringify(newDevouredState),
+            body: JSON.stringify(newDevourState),
           }).then((response) => {
             // Check that the response is all good
             // Reload the page so the user can see the new quote
             if (response.ok) {
-              console.log(`changed devoured to: ${newDevoured}`);
+              console.log(`changed devour to: ${newDevour}`);
               location.reload('/');
             } else {
               alert('something went wrong!');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
         // Grabs the value of the textarea that goes by the name, "quote"
         const newBurger = {
-          ca: document.getElementById('ca').value.trim(),
+          burger_name: document.getElementById('ca').value.trim(),
           devoured: document.getElementById('devoured').checked,
         };
   
