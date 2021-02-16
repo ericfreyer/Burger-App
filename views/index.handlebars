@@ -1,8 +1,22 @@
-<h1 id='title'>Eat Da Burger!</h1>
+<div id="titleDiv">
+  <div id=leftBurgerDiv>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="leftBurgers" width=50/>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="leftBurgers" width=50/>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="leftBurgers" width=50/>
+  </div> 
+  <h1 id='title'>Eat Da Burger!</h1>
+  <div id=rightBurgerDiv>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="rightBurgers" width=50/>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="rightBurgers" width=50/>
+    <img src="https://uploads.scratch.mit.edu/galleries/thumbnails/5890467.png" alt="Dancing Burger" class="rightBurgers" width=50/>
+  </div>
+  </div>
+  <img id="cheese"src="assets/img/Daco_78140.png"/>
 
 <div class="container" id="mainDiv">
   <div class="row">
       <div id="notEatenDiv" class="col-sm">
+      <div id="notEatenList">
       <h2>Burgers Not Eaten!</h2>
 
       <ul>
@@ -12,6 +26,7 @@
         {{/unless}}
         {{/each}}
       </ul>
+      </div>
       </div>
 
       <div id="addBurgerDiv" class="col-sm">
@@ -23,17 +38,18 @@
             <input type="text" id="ca" name="burger_name">
           </div>
 
-          <div class="form-group">
-            <label for="devoured">Devoured?</label><br>
-            <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured!<br>
-            <input type="radio" name="devoured" value="0" id="devoured"> Not Devoured
+          <div class="form-group" id="choiceDiv">
+            <label for="devoured">Will You Eat Your Burger Now?</label><br>
+            <input type="radio" name="devoured" value="1" id="devoured" checked> Yes!<br>
+            <input type="radio" name="devoured" value="0" id="devoured"> Not Just Yet
           </div>
 
-          <button type="submit">Add Burger</button>
+          <button type="submit" class="btn btn-danger btn-sm">Add Burger</button>
         </form>
       </div>
 
       <div id="eatenDiv" class="col-sm">
+      <div id="eatenList">
       <h2>Burgers Devoured!</h2>
 
       <ul>
@@ -43,6 +59,7 @@
         {{/if}}
         {{/each}}
       </ul>
+      </div>
       </div>
 
     

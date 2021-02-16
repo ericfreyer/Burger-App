@@ -9,18 +9,48 @@ html {
 
 #mainDiv{
     padding-top: 5%;
-
+    margin-top: -6%;
     margin: none;
 }
 
 body {
-    background-color: rgb(245, 227, 126);
+    background-color: rgba(255,232,97,255);
+    font-family: 'Roboto', sans-serif;
 }
 
 li {
-    padding-bottom: 5%;
+    padding-bottom: 1%;
 }
 
 #addBurgerDiv {
     text-align: center;
+
+    margin-bottom: 13%;
+}
+
+.rightBurgers {
+    float: right;
+}
+
+#titleDiv {
+    display: flex;
+  flex-wrap: wrap;
+    align-items: center;
+  justify-content: center;
+  margin-top: -3%;
+  padding-bottom: 5%;
+
+}
+
+#leftBurgerDiv {
+    padding-right: 1%;
+}
+
+#rightBurgerDiv {
+    padding-left: 1%;
+}
+
+#cheese {
+    margin-bottom: -5%;
+    margin-top: -5%;
 }
