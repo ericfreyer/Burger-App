@@ -1,14 +1,20 @@
 const mysql = require('mysql');
 const password = require("../.env")
 
+var connection;
 
-const connection = mysql.createConnection({
+if (process.env.JAWSDB_URL) {
+  // connect to JawsDB (heroku)
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
   password: password,
   database: 'burgers_db',
 });
+}
 
 
 connection.connect((err) => {
