@@ -1,6 +1,5 @@
-require('dotenv').config();
 const mysql = require('mysql');
-const password = require("../.env")
+const password = require("../.env").config();
 
 var connection;
 
