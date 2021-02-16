@@ -7,6 +7,8 @@ if (process.env.JAWSDB_URL) {
   // connect to JawsDB (heroku)
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
+
+
 connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
@@ -15,7 +17,6 @@ connection = mysql.createConnection({
   database: 'burgers_db',
 });
 }
-
 
 connection.connect((err) => {
   if (err) {
