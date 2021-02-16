@@ -1,9 +1,10 @@
 const mysql = require('mysql');
 const password = require("../.env")
 
+
 const connection = mysql.createConnection({
   host: 'localhost',
-  port: 3306,
+  port: 8080,
   user: 'root',
   password: password,
   database: 'burgers_db',
