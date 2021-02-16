@@ -13,10 +13,10 @@
 * [Credits](#credits)
 
 # Installation
-Install mysql, inquirer, console.table. Run node employeeTracker.js to initialize the program.
+Install express, mysql, express-handlebars. Run node server.js to initialize the program.
 
 # Usage
-This program allows an employee to view their companies employees, departments, and roles, and update the database with new employees, their roles, the their department.
+This program allows you to keep track of your burgers, and burger consumption. You can add a burger to a list of burgers you want to eat, and then you can DEVOUR the burger and put it in the 'eaten' list. 
 
 # License
 No licenses.
