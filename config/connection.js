@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const password = require("../.env").config();
+const password = require("../.env")
 
 var connection;
 
